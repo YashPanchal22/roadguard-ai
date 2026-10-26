@@ -1,0 +1,11 @@
+train: train/images
+val: val/images
+test: test/images
+
+nc: 5
+names:
+  0: Longitudinal Crack
+  1: Transverse Crack
+  2: Alligator Crack
+  3: Pothole
+  4: Other

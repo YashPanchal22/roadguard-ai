@@ -1,0 +1,15 @@
+from app.models.entities import (  # noqa: F401
+    AuditLog,
+    DamageCategory,
+    DamageReport,
+    Detection,
+    DuplicateLink,
+    ModelEvaluation,
+    RepairUpdate,
+    ReportImage,
+    ReportStatus,
+    RoadImportance,
+    Role,
+    Severity,
+    User,
+)

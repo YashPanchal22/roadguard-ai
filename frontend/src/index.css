@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  .dark {
+    color-scheme: dark;
+  }
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-ink-50 text-ink-900 antialiased dark:bg-ink-950 dark:text-ink-100;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ember-500 ring-offset-2 ring-offset-white dark:ring-offset-ink-950;
+  }
+  ::selection {
+    @apply bg-ember-500/25;
+  }
+  /* Scrollbars */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-ink-300/70 dark:bg-ink-700;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-ink-200/80 bg-white shadow-card dark:border-ink-800 dark:bg-ink-900;
+  }
+  .card-pad {
+    @apply p-4 sm:p-5;
+  }
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-ink-500 dark:text-ink-400;
+  }
+  .field {
+    @apply w-full rounded-lg border border-ink-300 bg-white px-3 py-2 text-sm text-ink-900 shadow-sm transition
+      placeholder:text-ink-400 focus:border-ember-500 focus:outline-none focus:ring-2 focus:ring-ember-500/30
+      disabled:cursor-not-allowed disabled:bg-ink-100
+      dark:border-ink-700 dark:bg-ink-900 dark:text-ink-100 dark:placeholder:text-ink-500 dark:disabled:bg-ink-800;
+  }
+  .field-error {
+    @apply border-signal-red focus:border-signal-red focus:ring-signal-red/30;
+  }
+  .hint {
+    @apply mt-1 text-xs text-ink-500 dark:text-ink-400;
+  }
+  .table-base {
+    @apply w-full border-collapse text-left text-sm;
+  }
+  .table-base thead th {
+    @apply whitespace-nowrap border-b border-ink-200 px-3 py-2.5 text-xs font-semibold uppercase tracking-wide text-ink-500 dark:border-ink-800 dark:text-ink-400;
+  }
+  .table-base tbody td {
+    @apply border-b border-ink-100 px-3 py-3 align-middle dark:border-ink-800/70;
+  }
+  .table-base tbody tr:hover {
+    @apply bg-ink-50/80 dark:bg-ink-800/40;
+  }
+  .link {
+    @apply text-ember-600 underline-offset-2 hover:underline dark:text-ember-400;
+  }
+}
+
+/* Leaflet dark theme adjustments */
+.leaflet-container {
+  @apply z-0 rounded-xl bg-ink-200 font-sans dark:bg-ink-800;
+}
+.dark .leaflet-tile-pane {
+  filter: brightness(0.72) contrast(1.05) saturate(0.85) hue-rotate(180deg) invert(1);
+}
+.leaflet-popup-content-wrapper {
+  @apply rounded-lg text-ink-900;
+}
+.leaflet-popup-content {
+  margin: 10px 12px;
+  font-size: 12px;
+}
+.leaflet-control-attribution {
+  font-size: 9px !important;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+*.timestamp-*.mjs
+npm-debug.log*
+
+# Data & models (weights are large; see docs/MODEL_GUIDE.md to fetch them)
+data/roadguard.db
+data/roadguard.db-wal
+data/roadguard.db-shm
+data/uploads/
+data/models/*.pt
+data/models/*.onnx
+data/dataset/images/
+data/dataset/labels/
+ml/evaluation/results/
+ml/runs/
+runs/
+
+# Environment & secrets
+.env
+.env.local
+*.log
+
+# OS
+.DS_Store

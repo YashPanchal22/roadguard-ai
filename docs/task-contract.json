@@ -1,0 +1,34 @@
+{
+  "task_id": "roadguard-ai-build-2026-10-25",
+  "mode": "implement",
+  "objective": "Build RoadGuard AI: a functional FastAPI + React/TypeScript road damage detection and monitoring platform with real YOLO inference, persistent reports, Leaflet map, explainable prioritisation, analytics, exports, tests and documented model workflow.",
+  "acceptance_criteria": [
+    "AC1 backend and frontend start with documented commands",
+    "AC2 valid road photo upload is validated (extension, MIME, magic bytes, size, integrity)",
+    "AC3 detection model loads once at startup when weights are present; missing weights return an honest actionable error",
+    "AC4 inference returns real detections (class, confidence, bbox) plus an annotated image, never fabricated",
+    "AC5 report submission with GPS or manually picked coordinates persists a report with reference ID",
+    "AC6 report renders at the correct position on the Leaflet map with filters and popups",
+    "AC7 dashboard KPIs and charts are computed from stored records and degrade gracefully when empty",
+    "AC8 authorised reviewer can transition status and record repair updates with audit history",
+    "AC9 reports and analytics export as CSV, JSON and PDF from real records",
+    "AC10 data persists across application restart",
+    "AC11 backend test suite passes and frontend type-check + production build succeed (evidence recorded)"
+  ],
+  "non_goals": [
+    "training a production road-damage model inside this environment",
+    "fabricating evaluation metrics or synthetic detections presented as real inference",
+    "multi-tenant cloud deployment, email delivery, SMS"
+  ],
+  "risk": "high",
+  "budget": "deep",
+  "allowed_write_scope": ["roadguard-ai/**"],
+  "verification": "full",
+  "policy_record": {
+    "planning": "deep",
+    "context_depth": "dependency",
+    "verification_depth": "full",
+    "delegation": "none",
+    "reason_codes": ["multiple-files", "shared-module", "security-surface", "greenfield-architecture"]
+  }
+}

@@ -1,0 +1,31 @@
+# ---------------------------------------------------------------------------
+# RoadGuard AI backend — pinned, tested versions (Python 3.11 – 3.13)
+# Install: pip install -r backend/requirements.txt
+#
+# PyTorch is installed separately from the CPU/CUDA index so the correct wheel
+# is chosen for the machine:
+#   CPU : pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+#   CUDA: pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu124
+# ---------------------------------------------------------------------------
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.0
+email-validator==2.2.0
+sqlalchemy==2.0.36
+python-multipart==0.0.20
+PyJWT==2.10.1
+Pillow==12.3.0
+opencv-python==4.11.0.86
+numpy==2.3.5
+pandas==2.2.3
+scikit-learn==1.6.0
+reportlab==4.2.5
+imagehash==4.3.1
+ultralytics==8.3.58
+# torch / torchvision: see the note above
+torch==2.6.0
+torchvision==0.21.0
+# --- test-only -------------------------------------------------------------
+pytest==8.3.4
+httpx==0.28.1

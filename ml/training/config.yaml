@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------------------
+# RoadGuard AI — reproducible training configuration (Ultralytics YOLOv8)
+# Every value here is passed to train.py; nothing is hidden in the code.
+# ---------------------------------------------------------------------------
+model: yolov8s.pt            # base checkpoint (COCO) to fine-tune
+data: ../data/dataset/data.yaml
+epochs: 100
+imgsz: 640
+batch: 16
+patience: 25
+optimizer: auto
+seed: 0
+deterministic: true
+pretrained: true
+workers: 4
+device: cpu                  # 'cpu', '0' (first CUDA GPU), '0,1'
+project: runs/train
+name: roadguard-yolov8s
+# --- augmentation ----------------------------------------------------------
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 0.0
+translate: 0.1
+scale: 0.5
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+mosaic: 1.0
+mixup: 0.0
+copy_paste: 0.0
+# --- validation ------------------------------------------------------------
+val: true
+save_period: 10
+plots: true

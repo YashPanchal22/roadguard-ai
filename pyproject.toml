@@ -1,0 +1,16 @@
+[project]
+name = "roadguard-ai"
+version = "1.0.0"
+description = "RoadGuard AI — Intelligent Road Damage Detection & Monitoring Platform"
+authors = [
+    { name = "Yash Panchal", email = "panchalyash862@gmail.com" }
+]
+urls = { "Homepage" = "https://github.com/YashPanchal/roadguard-ai" }
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "B008", "UP038", "UP017", "B904"]

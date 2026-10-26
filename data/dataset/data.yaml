@@ -1,0 +1,13 @@
+# YOLO dataset descriptor — edit to match your own annotated data.
+name: roadguard-local
+path: .
+train: images/train
+val: images/val
+test: images/test
+nc: 5
+names:
+  0: Longitudinal Crack
+  1: Transverse Crack
+  2: Alligator Crack
+  3: Pothole
+  4: Other
