@@ -1,4 +1,5 @@
 import axios, { AxiosError, type AxiosInstance, type InternalAxiosRequestConfig } from 'axios';
+import { handleMockFallback } from './mockFallback';
 
 export const TOKEN_STORAGE_KEY = 'roadguard.token';
 
@@ -44,6 +45,17 @@ apiClient.interceptors.request.use((config: InternalAxiosRequestConfig) => {
 apiClient.interceptors.response.use(
   (response) => response,
   (error: AxiosError<{ error?: ApiErrorPayload }>) => {
+    // Graceful fallback for GitHub Pages demo mode when no backend is running
+    if (
+      (!error.response || error.response.status === 404 || error.response.status === 502 || error.response.status === 503) &&
+      error.config
+    ) {
+      const fallback = handleMockFallback(error.config);
+      if (fallback) {
+        return fallback;
+      }
+    }
+
     if (error.response?.data?.error) {
       const payload = error.response.data.error;
       throw new ApiError(error.response.status, payload);
