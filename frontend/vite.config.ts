@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 const apiTarget = process.env.VITE_API_TARGET ?? 'http://127.0.0.1:8000';
 
 export default defineConfig({
+  base: process.env.VITE_BASE_PATH ?? (process.env.GITHUB_ACTIONS ? '/roadguard-ai/' : '/'),
   plugins: [react()],
   server: {
     host: '0.0.0.0',

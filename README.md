@@ -1,5 +1,6 @@
 # RoadGuard AI — Intelligent Road Damage Detection & Monitoring Platform
 
+[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-2ea44f?logo=github)](https://yashpanchal22.github.io/roadguard-ai/)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/YashPanchal22/roadguard-ai)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688.svg)](https://fastapi.tiangolo.com/)
@@ -23,10 +24,15 @@ audit trail, exports and a documented model training/evaluation path.
 
 ---
 
-## 🚀 Live Demo & Real YOLO Detection Showcase
+## 🚀 Live Demo & Deployment
 
-### 1-Click Launch on GitHub Codespaces
-Click the badge above or navigate to **Code → Codespaces → Create codespace on main**. GitHub automatically installs all Python + PyTorch and React dependencies and launches the full-stack app directly in your browser with zero local configuration.
+### 🌐 Live Web Demo on GitHub Pages
+* **URL:** **[https://yashpanchal22.github.io/roadguard-ai/](https://yashpanchal22.github.io/roadguard-ai/)**
+* **Automated CI/CD:** Powered by GitHub Actions (`.github/workflows/deploy-pages.yml`).
+* **Activation:** In your GitHub repo settings, go to **Settings → Pages → Source** and select **GitHub Actions**. Every push to `main` deploys the web app automatically.
+
+### ⚡ 1-Click Full-Stack Launch on GitHub Codespaces
+Click the **Open in GitHub Codespaces** badge or go to **Code → Codespaces → Create codespace on main**. GitHub launches a full cloud container running both the Python AI model (PyTorch YOLOv8) and React frontend with zero local configuration.
 
 ### Real AI Inference Output (CPU YOLOv8s)
 The platform performs real-time distress localization and categorization across 5 distress classes (*Pothole, Longitudinal Crack, Transverse Crack, Alligator Crack, Other*):

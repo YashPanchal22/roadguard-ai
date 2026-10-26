@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: roadguard-ai-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ROADGUARD_JWT_SECRET
+        generateValue: true
+      - key: ROADGUARD_ALLOW_ORIGINS
+        value: "https://yashpanchal22.github.io,http://localhost:5173"
+      - key: ROADGUARD_DEMO_DATA
+        value: "true"
