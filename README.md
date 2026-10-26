@@ -1,5 +1,12 @@
 # RoadGuard AI — Intelligent Road Damage Detection & Monitoring Platform
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/YashPanchal22/roadguard-ai)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688.svg)](https://fastapi.tiangolo.com/)
+[![YOLOv8](https://img.shields.io/badge/Model-YOLOv8%20Object%20Detection-orange.svg)](https://ultralytics.com)
+[![React 18](https://img.shields.io/badge/Frontend-React%2018%20%2B%20Vite-61dafb.svg)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178c6.svg)](https://www.typescriptlang.org/)
+
 RoadGuard AI is a working full-stack platform for reporting road damage, running real
 YOLO object detection on uploaded photographs, placing reports on an interactive map,
 prioritising repairs with an explainable score, and tracking each report from submission
@@ -13,6 +20,28 @@ audit trail, exports and a documented model training/evaluation path.
 > export is computed from database rows. Model metrics are only shown when a real
 > evaluation has been imported. Missing weights produce an explicit error, never
 > fabricated predictions. Demo data is flagged `DEMO` everywhere, including exports.
+
+---
+
+## 🚀 Live Demo & Real YOLO Detection Showcase
+
+### 1-Click Launch on GitHub Codespaces
+Click the badge above or navigate to **Code → Codespaces → Create codespace on main**. GitHub automatically installs all Python + PyTorch and React dependencies and launches the full-stack app directly in your browser with zero local configuration.
+
+### Real AI Inference Output (CPU YOLOv8s)
+The platform performs real-time distress localization and categorization across 5 distress classes (*Pothole, Longitudinal Crack, Transverse Crack, Alligator Crack, Other*):
+
+| Input Road Photo | Real-Time YOLO Bounding Boxes & Confidence |
+|:---:|:---:|
+| ![Original Pothole](docs/assets/pothole_original.jpg) | ![Detected Pothole](docs/assets/pothole_detection_demo.jpg) |
+| *Urban roadway distress input* | *Real YOLOv8 detection: distress boxes with confidence scores* |
+
+### Pre-Configured Demo Credentials for Evaluators
+| Role | Email | Password | Access Highlights |
+|---|---|---|---|
+| **Citizen** | `citizen@demo.local` | `Citizen#2024` | Photo upload, GPS pinning, real-time YOLO bounding box visualization |
+| **Reviewer** | `reviewer@demo.local` | `Reviewer#2024` | Review workflow queue, duplicate candidate matching, audit history |
+| **Admin** | `admin@demo.local` | `Admin#2024` | 8-chart analytics dashboard, explainable priority scoring, CSV/JSON/PDF exports |
 
 ---
 

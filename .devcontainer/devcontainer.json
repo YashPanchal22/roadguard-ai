@@ -1,0 +1,28 @@
+{
+  "name": "RoadGuard AI Dev & Live Demo",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "forwardPorts": [5173, 8000],
+  "portsAttributes": {
+    "5173": {
+      "label": "RoadGuard AI Frontend",
+      "onAutoForward": "openBrowser"
+    },
+    "8000": {
+      "label": "RoadGuard AI Backend API",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "pip install -r backend/requirements.txt && cd frontend && npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  }
+}
