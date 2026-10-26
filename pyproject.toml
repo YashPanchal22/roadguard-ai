@@ -5,7 +5,7 @@ description = "RoadGuard AI — Intelligent Road Damage Detection & Monitoring P
 authors = [
     { name = "Yash Panchal", email = "panchalyash862@gmail.com" }
 ]
-urls = { "Homepage" = "https://github.com/YashPanchal/roadguard-ai" }
+urls = { "Homepage" = "https://github.com/YashPanchal22/roadguard-ai" }
 
 [tool.ruff]
 line-length = 120

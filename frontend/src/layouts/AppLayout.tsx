@@ -228,12 +228,12 @@ export function AppLayout() {
           </Badge>
 
           <a
-            href="https://github.com/YashPanchal/roadguard-ai"
+            href="https://github.com/YashPanchal22/roadguard-ai"
             target="_blank"
             rel="noreferrer"
             className="rounded-lg border border-ink-200 p-2 text-ink-600 transition hover:bg-ink-100 hover:text-ink-900 dark:border-ink-700 dark:text-ink-300 dark:hover:bg-ink-800 dark:hover:text-white"
             aria-label="GitHub Repository by Yash Panchal"
-            title="GitHub: YashPanchal/roadguard-ai"
+            title="GitHub: YashPanchal22/roadguard-ai"
           >
             <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
               <path

@@ -379,7 +379,7 @@ Full evidence, coverage notes and known gaps: [docs/TESTING.md](docs/TESTING.md)
 ## 13. Author & Maintainer
 
 * **Yash Panchal**
-* GitHub: [@YashPanchal](https://github.com/YashPanchal)
+* GitHub: [@YashPanchal22](https://github.com/YashPanchal22)
 * Email: [panchalyash862@gmail.com](mailto:panchalyash862@gmail.com)
-* Repository: [https://github.com/YashPanchal/roadguard-ai](https://github.com/YashPanchal/roadguard-ai)
+* Repository: [https://github.com/YashPanchal22/roadguard-ai](https://github.com/YashPanchal22/roadguard-ai)
 
